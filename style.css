@@ -1,0 +1,48 @@
+html,
+body,
+.container {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  background: #f9f9f9;
+  padding: 30px 50px;
+}
+
+.row {
+  background: #ffffff;
+  box-shadow: 0 2px 20px 2px rgba(0, 0, 0, 0.2);
+  padding: 30px 50px;
+}
+
+.searchContainer {
+  text-align: right;
+  padding: 10px;
+}
+.selected {
+  background: #acbad4;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  min-height: 600px;
+  background: #ffffff;
+  box-shadow: 0 2px 20px 2px rgba(0, 0, 0, 0.2);
+  padding: 30px 50px;
+}
+thead {
+  position: sticky;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  width: 15%;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

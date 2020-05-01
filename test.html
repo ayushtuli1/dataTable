@@ -1,0 +1,84 @@
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body onload = "getData()">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">
+                DataTable
+            </h2>
+            <div">
+                <div>
+                    <div>
+                        <label>Show 
+                        <select id="ddlViewBy" onchange="changeLength()" 
+                                aria-controls="realtime" class="">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                        </select> 
+                        entries</label>
+                    </div>
+                    <div  class="searchContainer"><label>Search:<input  id="search" onkeyup="search(this.value)" type="search" class=""
+                                placeholder="" aria-controls="realtime"></label>
+                    </div>
+                    <table id="dataTable" class="display"  style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Name
+                                    <i onclick="sortColumn('name')" class="glyphicon glyphicon-sort"></i>
+                                </th>
+                                <th>Alpha2 Code
+                                    <i onclick="sortColumn('alpha2Code')" class="glyphicon glyphicon-sort"></i>
+                                </th>
+                                <th>Sub region
+                                    <i  onclick="sortColumn('subregion')" class="glyphicon glyphicon-sort"></i>
+                                </th>
+                                <th>Capital
+                                    <i onclick="sortColumn('capital')" class="glyphicon glyphicon-sort"></i>
+                                </th>
+                                <th>Population
+                                    <i onclick="sortColumn('population')" class="glyphicon glyphicon-sort"></i>
+                                </th>
+                                <th>Numeric Code
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        </tbody>
+                    </table>
+
+                    <div class="dataTables_info" id="realtime_info" role="status" aria-live="polite">Showing <span id="pagnumber"></span> to <span id="pageItems"></span> of <span id="totalItems"></span>
+                        entries</div>
+                    <div class="searchContainer" >
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" onclick="previous()" >Previous</a></li>
+                                <li class="page-item"><a class="page-link" onclick="changePageNum(1)">1</a></li>
+                                <li class="page-item"><a class="page-link" onclick="changePageNum(2)" >2</a></li>
+                                <li class="page-item"><a class="page-link" onclick="changePageNum(3)" >3</a></li>
+                                <li class="page-item"><a class="page-link" onclick="changePageNum(4)" >4</a></li>
+                                <li class="page-item"><a class="page-link" onclick="changePageNum(5)" >5...</a></li>
+                                <li class="page-item"><a class="page-link" onclick="next()" >Next</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
+
+
