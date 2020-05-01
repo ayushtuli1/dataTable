@@ -1,5 +1,6 @@
 Datatable - Specifications
 Objective was to build a Datatable for given set of JSON data(fetched from rest api) which has searching,filtering, sortinging and pagination implemented
+
 Data table Features : 
 1. A Basic table layout with complete data is displayed with at least 5 columns. 
 2. all the colums are sortable
